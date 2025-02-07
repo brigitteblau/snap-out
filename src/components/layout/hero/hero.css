@@ -1,0 +1,57 @@
+/* hero.css */
+:root {
+    --hero-text-color: rgb(67, 67, 67);
+    --button-bg-color: #346c65;
+    --button-hover-bg-color: #2a5955;
+    --button-text-color: white;
+    --button-padding: 15px 30px;
+    --font-size: 20px;
+    --letter-spacing: 2px;
+}
+
+/* Hero section */
+.hero-section h1 span {
+    display: inline-block;
+    position: relative;
+}
+
+.hero-section h1 span::after {
+    content: '|';
+    position: absolute;
+    animation: blink 0.8s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        visibility: hidden;
+    }
+}
+
+/* Flex container */
+.div-fuck {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--hero-text-color);
+}
+
+.div-fuck p {
+    letter-spacing: var(--letter-spacing);
+}
+
+/* Button */
+.button-get {
+    text-decoration: none;
+    padding: var(--button-padding);
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: var(--font-size);
+}
+
+.button-get:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-bg-color);
+    transform: scale(1.05);
+}

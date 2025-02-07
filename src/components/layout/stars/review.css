@@ -1,0 +1,22 @@
+.review-card {
+  margin: 10px;
+    padding: 20px;
+  }
+  
+  .username {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .review {
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  .rating {
+    display: flex;
+    margin: 2%;
+  }
+  
+ 
+  

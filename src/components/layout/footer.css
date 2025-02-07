@@ -1,0 +1,42 @@
+:root{
+    --main-color: #346c65;
+    --button-hover-bg-color: #2a5955;
+    --main-text-color: white;
+}
+.footer {
+    background-color: var(--main-color);
+    color: var(--main-text-color);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  .footer-links span{
+    font-weight: bolder;
+  }
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+  }
+  

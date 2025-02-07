@@ -1,0 +1,120 @@
+:root {
+  --section-padding: 20px;
+  --gap: 20px;
+  --banner-margin: 1%;
+  --banner-width: 90%;
+  --banner-min-width: 400px;
+  --banner-bg-color: white;
+  --banner-padding: 20px;
+  --banner-border-radius: 10px;
+  --banner-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  --banner-hover-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  --icon-font-size: 50px;
+  --learn-more-color: #346c65;
+  --learn-more-hover-color: #2a5955;
+  --learn-more-font-size: 14px;
+  --learn-more-transition: 0.3s ease-in-out;
+  --close-btn-size: 20px;
+  --close-btn-border: 15px;
+  --close-btn-bg-color: red;
+  --close-btn-hover-color: darkred;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--gap);
+  align-items: center;
+  padding: var(--section-padding);
+}
+
+.banner {
+  margin: var(--banner-margin);
+  width: var(--banner-width);
+  min-width: var(--banner-min-width);
+  background: var(--banner-bg-color);
+  padding: var(--banner-padding);
+  box-shadow: var(--banner-shadow);
+  text-align: center;
+  border-radius: var(--banner-border-radius);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.banner:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--banner-hover-shadow);
+}
+
+.banner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: var(--icon-font-size);
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.learn-more {
+  border: none;
+  background-color: transparent;
+  color: var(--learn-more-color);
+  font-size: var(--learn-more-font-size);
+  cursor: pointer;
+  transition: color var(--learn-more-transition), transform 0.2s ease-in-out;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+  color: var(--learn-more-hover-color);
+  transform: scale(1.05);
+}
+
+.div-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.close {
+  background: none;
+  border: none;
+  width: var(--close-btn-size);
+  height: var(--close-btn-size);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  width: var(--close-btn-border);
+  height: 2px;
+  background-color: var(--close-btn-bg-color);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.close::before {
+  transform: rotate(45deg);
+}
+
+.close::after {
+  transform: rotate(-45deg);
+}
+
+.close:hover::before,
+.close:hover::after {
+  background-color: var(--close-btn-hover-color);
+  transform: scale(1.1);
+}
